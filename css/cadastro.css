@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#titulo {
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0d22da;
+}
+
+div {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    flex-direction: column;
+    border: 1px solid #0d22da;
+    padding: 10px;
+    width: 280px;
+    border-radius: 5px;
+    height: 25px;
+    margin-bottom: 25px;
+}
+
+input {
+    display: flex;
+    margin: auto;
+    width: 280px;
+    border: none;
+    font-size: 16px;
+}
+
+label {
+    display: flex;
+    justify-content: first baseline;
+}
+
+button {
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    width: 230px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    border-radius: 15px;
+    font-size: 18px;
+    background-color: #0d22da;
+    color: white;
+}
+
+button:hover {
+    background-color: #070f57;
+}
+
+form {
+    margin-top: 5vh;
+}
+
+#logo {
+    text-align: center;
+    top: 80px;
+    position: relative;
+    font-size: 80px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.error-container {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    margin: auto;
+    height: 10px;
+    width: 100%;
+}
+
+.error-msg {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.success-container {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    margin: auto;
+    height: 10px;
+    width: 100%;
+}
+
+.success-msg {
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 15px;
+    width: 400px;
+    border-radius: 18px;
+    opacity: 1;
+    /* Visível inicialmente */
+    transform: translateY(0);
+    /* Posição inicial */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}

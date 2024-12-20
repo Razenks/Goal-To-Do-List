@@ -1,0 +1,52 @@
+<?php
+// Captura possíveis mensagens de sucesso ou erro passadas via URL através do método GET.
+// As variáveis são inicializadas como strings vazias se não houver mensagens.
+$msgSucessoCadastro = isset($_GET['msgSucesso']) ? $_GET['msgSucesso'] : '';
+$msgErroCadastro = isset($_GET['msgErro']) ? $_GET['msgErro'] : '';
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <h1 id="logo">TO-DO</h1>
+    <form action="./config/processa_login.php" method="POST">
+
+        <p class="success-container">
+            <?php
+            if (!empty($msgSucessoCadastro)) {
+                echo '<p class="success-msg">' . htmlspecialchars($msgSucessoCadastro) . '</p>';
+            }
+            ?>
+        </p>
+
+        <p class="error-container">
+            <?php
+            if (isset($_GET['msgErro'])) {
+                echo '<p class="error-msg">' . $_GET['msgErro'] . '</p>';
+            }
+            ?>
+        </p>
+
+        <h1 id="titulo">Login</h1>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email">
+        </div>
+
+        <div>
+            <label for="senha">Senha</label>
+            <input type="password" name="senha">
+        </div>
+        <p><a href="./pages/cadastro.php">Fazer cadastro</a></p>
+        <button type="submit">Entrar</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#navegacao {
+    display: flex;
+    justify-content: space-around;
+    gap: 20%;
+    align-items: center;
+    background-color: #2c41f8;
+    height: 100px;
+    color: white;
+}
+
+#links ul {
+    display: flex;
+    gap: 25%;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+#links a {
+    text-decoration: none;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.error-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    text-align: center;
+    margin: auto;
+    height: 10px;
+    width: 100%;
+}
+
+.error-msg {
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 15px;
+    width: 400px;
+    border-radius: 18px;
+    opacity: 1;
+    /* Visível inicialmente */
+    transform: translateY(0);
+    /* Posição inicial */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.success-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    text-align: center;
+    margin: auto;
+    height: 10px;
+    width: 100%;
+}
+
+.success-msg {
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 15px;
+    width: 400px;
+    border-radius: 18px;
+    opacity: 1;
+    /* Visível inicialmente */
+    transform: translateY(0);
+    /* Posição inicial */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/*CARDS*/
+.cards {
+    position: relative;
+    width: 62vw;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 16, 247, 0.356);
+    transition: transform 0.3s ease;
+}
+
+.cards:hover {
+    transform: translateY(-5px);
+}
+
+#input-titulo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#input-titulo input {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+.descricao textarea {
+    width: 755px;
+    height: 100px;
+    font-size: 16px;
+    resize: none;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 0;
+    padding: 5px;
+}
+
+.datas {
+    display: flex;
+    gap: 230px;
+    width: 740px;
+    justify-content: center;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+select {
+    margin-bottom: 5px;
+}
+
+.topo {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-around;
+}
+
+.importancia {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.importancia select {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 181px;
+    padding: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+    justify-content: space-around;
+}
+
+.buttons .b-cancelar {
+    width: 180px;
+    height: 35px;
+    border-radius: 15px;
+    background-color: rgb(197, 21, 21);
+    color: white;
+    font-size: 18px;
+}
+
+.buttons .b-cancelar a {
+    color: white;
+}
+
+.buttons .b-cancelar:hover {
+    background-color: rgb(122, 14, 14);
+}
+
+.buttons .b-adicionar {
+    width: 180px;
+    height: 35px;
+    border-radius: 15px;
+    background-color: rgb(21, 197, 36);
+    color: white;
+    font-size: 18px;
+}
+
+.buttons .b-adicionar:hover {
+    background-color: rgb(13, 124, 23);
+}
+
+/*Menu*/
+.menu ul {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+
+.menu li {
+    font-size: 18px;
+    cursor: pointer; /* Deixa claro que o item é clicável */
+    transition: border 0.3s ease-in-out; /* Efeito suave na borda */
+}
+
+.menu li.active {
+    border-bottom: 3px solid blue; /* Estilo para o item ativo */
+}
+
+@media (min-width:300px) and (max-width: 956px) {
+    .cards {
+        width: 85%;
+    }
+
+    .descricao textarea {
+        width: 98%;
+    }
+
+    .botoes {
+        flex-direction: column;
+    }
+
+    .finalizar, .desativar {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    #navegacao {
+        gap: 0%;
+    }
+
+    .topo {
+        gap: 10px;
+    }
+
+    .datas {
+        display: flex;
+        gap: 50px;
+        width: 100%;
+        justify-content: center;
+        padding: 5px;
+        margin-top: 10px;
+    }
+    
+}
+
+@media (min-width: 1280px  ) and (max-width: 1300px) {
+
+    .descricao textarea {
+        width: 98%;
+    }
+
+    .botoes {
+        flex-direction: column;
+    }
+
+    .finalizar, .desativar {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+}
